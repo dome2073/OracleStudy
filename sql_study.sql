@@ -1,3 +1,13 @@
+--과제 . 직원(s_emp)테이블에서 연봉 상위 10 명만 출력
+-- hint rownom 이용 --> 5개의 데이터 rownum 1~10
+select name, salary 
+from (select name,salary from s_emp order by 2 desc)
+where rownum <=10;
+
+
+
+
+
 select DISTINCT manager_id
 from s_emp
 ;
